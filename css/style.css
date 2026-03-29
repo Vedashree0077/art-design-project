@@ -687,6 +687,11 @@ section{
     margin-right: auto;
 
 }
+.footer-box i {
+    color: #ff6f61; /* You can change icon color */
+    margin-right: 8px;
+    color: #ffc852;
+}
 
 /* ---------- HEADINGS ---------- */
 .footer-box h4{
