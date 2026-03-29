@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact</title>
+
+ <link rel="icon" href="images/icon.png" type="image/png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <img src="css/logo.jpeg" class="logo" alt="Art Design Logo">
+
+<nav class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
+
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+        <a href="#design" class="drop-btn">
+            Art Design & Craft <i class="fa fa-chevron-down"></i>
+        </a>
+        <div class="dropdown-menu">
+            <a href="drawing.html">Drawing</a>
+            <a href="rangoli.html">Rangoli</a>
+            <a href="mehndi.html">Mehndi</a>
+            <a href="craft.html">Craft</a>
+        </div>
+    </div>
+
+    <a href="review.html">Review</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+    <form class="search-box">
+        <input type="text" placeholder="Search...">
+        <button type="submit">
+            <img src="images/search.png" alt="search">
+        </button>
+    </form>
+
+    <div class="social-auth">
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <div class="auth-text">
+           <div class="auth-text">
+            <a href="Login/login.html">Login</a>
+           
+        </div>
+    </div>
+</header>
+
+
+<section class="contact" id="contact">
+
+  <!-- HEADER -->
+  <div class="contact-header">
+    <h2>Contact Us</h2>
+    <p>Let’s connect and create something beautiful together</p>
+  </div>
+
+  <!-- WRAPPER -->
+  <div class="contact-wrapper">
+
+    <!-- LEFT : FORM CARD -->
+    <div class="contact-form-card">
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" placeholder="Phone Number">
+        </div>
+
+        <div class="form-group">
+          <textarea rows="4" placeholder="Your Message"></textarea>
+        </div>
+
+        <button type="submit" class="contact-btn">Send Message</button>
+      </form>
+    </div>
+
+    <!-- RIGHT : INFO CARD -->
+    <div class="contact-info-card">
+      <h3>Get in Touch</h3>
+      <p>
+        We’d love to hear from you. Reach out for custom art designs,
+        collaborations, or any creative ideas.
+      </p>
+
+      <div class="contact-details">
+        <div class="detail">
+          <span>Address:</span>
+          <p>Karnataka, India</p>
+        </div>
+
+        <div class="detail">
+          <span>Email:</span>
+          <p>artdesign@gmail.com</p>
+        </div>
+
+        <div class="detail">
+          <span>Phone:</span>
+          <p>+91 ----- -----</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Navigation -->
+        <div class="footer-box">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#design">Art Design & Craft</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Blog -->
+        <div class="footer-box">
+            <h4>From Our Blog</h4>
+            <ul>
+    <li>Latest art trends & creative ideas</li>
+    <li>Traditional art with modern touch</li>
+    <li>Festival special designs & tips</li>
+</ul>
+        </div>
+
+        <!-- Brand / About -->
+        <div class="footer-box">
+            <h3>Creative Art Design & Craft</h3>
+            <ul>
+              <li>Bringing creativity, tradition, and modern art together.</li>
+                <li>Unique Rangoli, Drawing, Mehndi & Craft designs for every occasion.</li>
+          </ul>
+        </div> 
+
+
+<button id="backToTop" title="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+      <!-- Contact Info -->
+        <div class="footer-box">
+            <h4>Contact Info</h4>
+            <p>Karnataka, India</p>
+            <p>+91 ----- -----</p>
+            <p> artdesign@gmail.com</p>
+       
+
+ <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+     </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>©Artdesign 2026 | Help Chatgpt </p>
+    </div>
+
+</footer>
+
+<script>
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const slidesContainer = document.querySelector(".slides");
+
+let index = 0;
+
+/* show slide */
+function showSlide(i){
+    slidesContainer.style.transform = `translateX(-${i * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[i].classList.add("active");
+}
+
+/* next */
+nextBtn.addEventListener("click", () => {
+    index++;
+    if(index >= slides.length){
+        index = 0;
+    }
+    showSlide(index);
+});
+
+/* prev */
+prevBtn.addEventListener("click", () => {
+    index--;
+    if(index < 0){
+        index = slides.length - 1;
+    }
+    showSlide(index);
+});
+
+/* dot click */
+dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+        index = i;
+        showSlide(index);
+    });
+});
+
+/* first active */
+showSlide(index);
+</script>
+
+
+
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.animate-section')
+    .forEach(section => observer.observe(section));
+</script>
+
+
+<script>
+const backToTop = document.getElementById("backToTop");
+
+// Show button after scroll
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 300){
+    backToTop.style.display = "flex";
+  }else{
+    backToTop.style.display = "none";
+  }
+});
+
+// Scroll to top
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+
+
+
+
+
+</body>
+</html>

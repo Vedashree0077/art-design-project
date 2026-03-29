@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Art Design</title>
+    
+    <link rel="icon" href="images/icon.png" type="image/png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <img src="css/logo.jpeg" class="logo" alt="Art Design Logo">
+
+    <nav class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
+
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+        <a href="#design" class="drop-btn">
+            Art Design & Craft <i class="fa fa-chevron-down"></i>
+        </a>
+        <div class="dropdown-menu">
+            <a href="drawing.html">Drawing</a>
+            <a href="rangoli.html">Rangoli</a>
+            <a href="mehndi.html">Mehndi</a>
+            <a href="craft.html">Craft</a>
+        </div>
+    </div>
+
+    <a href="review.html">Review</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+    <form class="search-box">
+        <input type="text" placeholder="Search...">
+        <button type="submit">
+            <img src="images/search.png" alt="search">
+        </button>
+    </form>
+
+    <div class="social-auth">
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <div class="auth-text">
+           <div class="auth-text">
+            <a href="Login/login.html">Login</a>
+           
+        </div>
+    </div>
+</header>
+
+
+<!-- PROFILE SECTION -->
+<section class="user-bar">
+  <div class="user-info">
+    <img src="css/logo.jpeg">
+    <span>VEDA SHREE</span>
+  </div>
+
+  <div class="user-actions">
+    <button onclick="openUpload()"><i class="fa-solid fa-plus"></i></button>
+    <button onclick="shareProfile()"><i class="fa-solid fa-share-nodes"></i></button>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+
+  <!-- IMAGE POST -->
+  <div class="pin">
+    <img src="rangoli/img1.png">
+
+    <!-- ICONS BELOW IMAGE -->
+    <div class="pin-actions">
+      <button onclick="like(this)">
+        <i class="fa-solid fa-heart"></i> <span>12</span>
+      </button>
+
+      <button onclick="toggleComment(this)">
+        <i class="fa-solid fa-comment"></i> <span>3</span>
+      </button>
+
+      <button onclick="toggleAudio(this)">
+        <i class="fa-solid fa-volume-high"></i>
+      </button>
+
+      <a href="rangoli/img1.png" download>
+        <i class="fa-solid fa-download"></i>
+      </a>
+
+      <button onclick="copyLink()">
+        <i class="fa-solid fa-share"></i>
+      </button>
+    </div>
+
+    <!-- COMMENTS -->
+    <div class="comments hidden">
+      <p>Beautiful work ❤️</p>
+      <p>Nice shading 👌</p>
+    </div>
+
+    <audio src="audio/voice1.mp3"></audio>
+  </div>
+
+
+  <!--
+  <div class="pin">
+    <video muted autoplay loop>
+      <source src="video/art.mp4" type="video/mp4">
+    </video>
+
+    <div class="pin-actions">
+      <button onclick="like(this)">
+        <i class="fa-solid fa-heart"></i> <span>8</span>
+      </button>
+      <button onclick="copyLink()">
+        <i class="fa-solid fa-share"></i>
+      </button>
+    </div>
+  </div>-->
+
+</section>
+
+<!-- UPLOAD MODAL -->
+<div class="modal" id="uploadModal">
+  <div class="modal-box modern">
+    
+    <h3>Upload Rangoli</h3>
+
+    <!-- Preview -->
+    <div id="previewBox" class="preview-box">
+      <span>Select file</span>
+    </div>
+
+    <input type="file" id="uploadFile" accept="image/*,video/*" hidden>
+
+    <button class="select-btn" onclick="document.getElementById('uploadFile').click()">
+      Choose File
+    </button>
+
+    <div class="btn-row">
+      <button class="publish" onclick="publish()">Publish</button>
+      <button class="cancel" onclick="closeUpload()">Cancel</button>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Navigation -->
+        <div class="footer-box">
+            <h4>Quick Links</h4>
+           <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#design">Art Design</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Blog -->
+        <div class="footer-box">
+            <h4>From Our Blog</h4>
+            <ul>
+    <li>Latest art trends & creative ideas</li>
+    <li>Traditional art with modern touch</li>
+    <li>Festival special designs & tips</li>
+</ul>
+        </div>
+
+        <!-- Brand / About -->
+        <div class="footer-box">
+            <h3>Creative Art Design & Craft</h3>
+            <ul>
+           <li>Bringing creativity, tradition, and modern art together.</li>
+                <li>Unique Rangoli, Drawing, Mehndi & Craft designs for every occasion. </li></ul>
+
+        </div>
+
+
+
+<button id="backToTop" title="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+        
+
+         <!-- Contact Info -->
+        <div class="footer-box">
+            <h4>Contact Info</h4>
+            <p>Karnataka, India</p>
+            <p>+91 ----- -----</p>
+            <p> artdesign@gmail.com</p>
+       
+
+ <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+     </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>©Artdesign 2026 | Help Chatgpt </p>
+    </div>
+
+
+
+</footer>
+
+
+<script>
+    function openUpload(){
+  document.getElementById("uploadModal").style.display="flex";
+}
+function closeUpload(){
+  document.getElementById("uploadModal").style.display="none";
+}
+
+function publish(){
+  const file=document.getElementById("uploadFile").files[0];
+  if(!file) return alert("Select file");
+
+  const url=URL.createObjectURL(file);
+  const pin=document.createElement("div");
+  pin.className="pin";
+
+  if(file.type.startsWith("video")){
+    pin.innerHTML=`<video autoplay muted loop src="${url}"></video>`;
+  }else{
+    pin.innerHTML=`<img src="${url}">`;
+  }
+
+  pin.innerHTML+=`
+    <div class="pin-actions">
+      <button onclick="like(this)"><i class="fa-solid fa-heart"></i> <span>0</span></button>
+      <button onclick="copyLink()"><i class="fa-solid fa-share"></i></button>
+    </div>
+  `;
+
+  document.getElementById("gallery").prepend(pin);
+  closeUpload();
+}
+
+function like(btn){
+  const span=btn.querySelector("span");
+  span.innerText=Number(span.innerText)+1;
+}
+
+function toggleComment(btn){
+  btn.closest(".pin").querySelector(".comments").classList.toggle("hidden");
+}
+
+function toggleAudio(btn){
+  const pin=btn.closest(".pin");
+  const audio=pin.querySelector("audio");
+  audio.paused ? audio.play() : audio.pause();
+}
+
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href);
+  alert("Link copied");
+}
+
+function shareProfile(){
+  copyLink();
+}
+
+</script>
+
+
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.animate-section')
+    .forEach(section => observer.observe(section));
+</script>
+
+
+<script>
+const backToTop = document.getElementById("backToTop");
+
+// Show button after scroll
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 300){
+    backToTop.style.display = "flex";
+  }else{
+    backToTop.style.display = "none";
+  }
+});
+
+// Scroll to top
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+
+<script>
+const fileInput = document.getElementById("uploadFile");
+const previewBox = document.getElementById("previewBox");
+
+fileInput.addEventListener("change", () => {
+  const file = fileInput.files[0];
+  if (!file) return;
+
+  const url = URL.createObjectURL(file);
+
+  if (file.type.startsWith("video")) {
+    previewBox.innerHTML = `<video src="${url}" autoplay muted loop></video>`;
+  } else {
+    previewBox.innerHTML = `<img src="${url}">`;
+  }
+});
+</script>
+
+
+</body>
+</html>
